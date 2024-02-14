@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { ListComponent } from './list/list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonService } from 'src/app/services/pokemonService/pokemon.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -11,7 +15,13 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     CommonModule,
-    PokemonRoutingModule
-  ]
+    PokemonRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    
+
+  ],
+  providers: [ PokemonService ]
 })
 export class PokemonModule { }
